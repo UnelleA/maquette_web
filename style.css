@@ -1,0 +1,89 @@
+/* Style général */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Conteneur principal de l'accordéon */
+.accordion {
+  width: 80%;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Titre de l'accordéon */
+.accordion-header {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Effet au survol sur le titre */
+.accordion-header:hover {
+  background-color: #0056b3;
+}
+
+/* Icône toggle */
+.accordion-header i {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotation de l'icône quand la section est ouverte */
+.accordion-header.active i {
+  transform: rotate(180deg);
+}
+
+/* Contenu de l'accordéon */
+.accordion-content {
+  display: none;
+  padding: 15px;
+  border-top: 1px solid #ccc;
+}
+
+/* Wrapper pour l'image et le texte */
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Style de l'image */
+.content-wrapper img {
+  width: 40%;
+  max-width: 300px;
+  border-radius: 5px;
+}
+
+/* Zone contenant le texte */
+.content-text {
+  width: 55%;
+  padding-left: 20px;
+}
+
+/* Style responsive pour les petits écrans */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-wrapper img {
+    width: 100%;
+  }
+
+  .content-text {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 15px;
+  }
+}
